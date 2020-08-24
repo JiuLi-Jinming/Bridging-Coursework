@@ -7,7 +7,8 @@
 {% block navigation %}
     {% if user.is_authenticated %}
         <div class="submission-choice">
-            <button type="submit" form="post-editor-form" class="btn-save" name="save_continue">Save</button><div class="dropdown">
+            <button type="submit" form="post-editor-form" class="btn-save" name="save_continue">Save and Continue</button>
+            <div class="dropdown">
                 <li class="dropbtn">Quit</li>
                 <div class="right-dropdown-content">
                     <button type="submit" form="post-editor-form" class="btn-quit" name="save_quit">Save</button>
