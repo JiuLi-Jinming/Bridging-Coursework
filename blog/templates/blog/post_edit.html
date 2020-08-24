@@ -1,9 +1,27 @@
 {% extends 'blog/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/navigation_btn.css' %}">
+{% endblock %}
+
+{% block navigation %}
+    {% if user.is_authenticated %}
+        <div class="submission-choice">
+            <button type="submit" form="post-editor-form" class="btn-save" name="save_continue">Save</button><div class="dropdown">
+                <li class="dropbtn">Quit</li>
+                <div class="right-dropdown-content">
+                    <button type="submit" form="post-editor-form" class="btn-quit" name="save_quit">Save</button>
+                    <button type="submit" form="post-editor-form" class="btn-quit" name="no_save_quit">No Save</button>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
 
 {% block content %}
-    <h2>New post</h2>
-    <form method="POST" class="post-form">{% csrf_token %}
+
+    <h2>Edit or New post</h2>
+    <form id="post-editor-form" method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
     </form>
 {% endblock %}
