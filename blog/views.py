@@ -83,3 +83,12 @@ def post_delete(request, pk):
     else:
         post.delete()
     return redirect('post_list')
+
+
+def home_page():
+    pass
+
+
+def blog_cv():
+    pass
+
