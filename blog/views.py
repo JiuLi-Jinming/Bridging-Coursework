@@ -89,6 +89,6 @@ def home_page():
     pass
 
 
-def cv_page():
-    pass
+def cv_page(request):
+    return render(request, 'blog/cv.html')
 
