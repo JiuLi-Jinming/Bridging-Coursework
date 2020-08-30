@@ -89,6 +89,6 @@ def home_page():
     pass
 
 
-def blog_cv():
+def cv_page():
     pass
 
