@@ -19,6 +19,6 @@ class HomePageTest(TestCase):
         response = cv_page(request)
         html = response.content.decode('utf8')
         self.assertTrue(html.strip().startswith('<html>'))
-        self.assertIn('<title>CV</title>', html)
+        self.assertIn("<h2>Jinming's CV</h2>", html)
         self.assertTrue(html.strip().endswith('</html>'))
 
