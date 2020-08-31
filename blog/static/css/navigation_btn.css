@@ -19,7 +19,7 @@
 
 .btn-quit{
     background: #f9f9f9;
-    color: black;
+    color: greenyellow;
     border: none;
     padding: 10px 30px;
     text-align: center;
@@ -31,6 +31,6 @@
 }
 
 .btn-quit:hover{
-    background-color: #f1f1f1;
+    background-color: green;
 }
 
